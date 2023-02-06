@@ -10,8 +10,9 @@ def combiner():
     for datafile in sys.argv[1:]:
 
         #adds the arguments to my empty list
-        file_list.append(pd.read_csv(datafile))
+        file_list.append(pd.read_csv(datafile).assign(filename = datafile))
 
+    
         #concat function to combine the files
         combine_data = pd.concat(file_list)
 
