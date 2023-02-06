@@ -1,26 +1,24 @@
 #import needed libraries/modules
 import pandas as pd
 import sys
+import os
 
 #creates list that will contain our command line arguments
 file_list = []
 
-def combiner():
 #loop through the arguments
-    for datafile in sys.argv[1:]:
+for datafile in sys.argv[1:]:
 
-        #adds the arguments to my empty list
-        file_list.append(pd.read_csv(datafile).assign(filename = datafile))
+    #adds the arguments to my empty list + used 'os' to get the base name in specified path. 
+    file_list.append(pd.read_csv(datafile).assign(filename = os.path.basename(datafile)))
 
     
-        #concat function to combine the files
-        combine_data = pd.concat(file_list)
+    #concat function to combine the files
+    combine_data = pd.concat(file_list)
 
-        #save our new combined csv data into a new file 
-        combine_data.to_csv("combined.csv")
+    #save our new combined csv data into a new file 
+    combine_data.to_csv("combined.csv")
 
 
 
-if __name__ == "__main__":
-    combiner()
-    print("Combine successful!")
+
