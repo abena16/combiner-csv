@@ -8,10 +8,10 @@ file_list = []
 
 #loop through the arguments 
 for datafile in sys.argv[1:]:
-
     #adds the arguments to our empty list + used 'os' to get the base name in specified path. 
     file_list.append(pd.read_csv(datafile).assign(filename = os.path.basename(datafile)))
 
+#check if combine function is doable 
 if len(file_list) > 1:
     #concat function to combine the files
     combine_data = pd.concat(file_list)
