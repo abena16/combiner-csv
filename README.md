@@ -1,3 +1,3 @@
 # combiner-csv
 
-Hello! Thanks for allowing me to get this far in the hiring process. The programming challenge was somewhat easy. I did run into some errors/problems at first, like everything ran perfect but the newly created file did not include both csv files, only one. Also was having the new column filename show the entire path name instead of just the base name. Im hoping I was able to provide a good solution, and I would appreciate the feedback on how to improve!   
+Hello! Im Arturo Benavides. Thanks for allowing me to get this far in the hiring process. The programming challenge was somewhat easy. I did run into some errors/problems at first, like everything ran perfect but the newly created file did not include both csv files, only one. Also was having the new column filename show the entire path name instead of just the base name. Im hoping I was able to provide a good solution, and I would appreciate the feedback on how to improve!   
