@@ -19,8 +19,12 @@ if len(file_list) > 1:
     #save our new combined csv data into a new file 
     combine_data.to_csv("combined.csv")
     print("Operation successful.")
+    #outputs the new file to stdout
+    combine_data.to_csv(sys.stdout, index=False)
 
 else:
     print("Invalid Arguments.")
+
+
 
 
